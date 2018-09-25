@@ -9,7 +9,9 @@ fi
 install_path=/usr/local/python
 pkg_name="Python-${py_version}"
 echo "install python${py_version}"
-yum install -y wget
+yum -y install gcc gcc-c++ zlib zlib-devel libffi-devel deltarpm kernel-devel kernel-headers make
+yum -y install bzip2 bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel
+yum -y install xz-devel
 wget "https://www.python.org/ftp/python/$py_version/${pkg_name}.tgz"
 tar zxvf ${pkg_name}.tgz
 cd ${pkg_name}
