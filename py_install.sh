@@ -23,6 +23,6 @@ make
 make install
 cd ..
 rm -rf ${pkg_name}*
-ln -sf ${install_path}/bin/python${py_version:0:2} /usr/bin/python${py_version:0}
-ln -sf ${install_path}/bin/pip${py_version:0} /usr/bin/pip${py_version:0}
+ln -sf ${install_path}/bin/python${py_version:0:2} /usr/local/bin/python${py_version:0}
+ln -sf ${install_path}/bin/pip${py_version:0} /usr/local/bin/pip${py_version:0}
 pip${py_version:0} install --upgrade pip
