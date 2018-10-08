@@ -23,6 +23,8 @@ make
 make install
 cd ..
 rm -rf ${pkg_name}*
-ln -sf ${install_path}/bin/python${py_version:0:2} /usr/local/bin/python${py_version:0:1}
+ln -sf ${install_path}/bin/python${py_version:0:1} /usr/local/bin/python${py_version:0:1}
 ln -sf ${install_path}/bin/pip${py_version:0:1} /usr/local/bin/pip${py_version:0:1}
 pip${py_version:0:1} install --upgrade pip
+pip${py_version:0:1} install --upgrade pipenv
+ln -sf ${install_path}/bin/pipenv /usr/local/bin/pipenv
